@@ -1,0 +1,159 @@
+body {
+    background-color: #4186A7;
+}
+
+footer {
+    text-align: center;
+    color: #fff;
+    padding: 30px 0;
+}
+
+h1, h2 {
+    font-family: Lobster, sans-serif;
+}
+
+h3 {
+    font-family: Georgia, serif;
+}
+
+.mainhead {
+    text-align: center;
+    color: black;
+}
+
+.mainhead a {
+    text-decoration: none;
+    color: black;
+}
+
+.tag {
+    border: 1px solid #555;
+    display: inline-block;
+    padding: 1em;
+    margin: 0.5em;
+    font-size: 1.5em;
+    text-decoration: none;
+    border-radius: 100%;
+    font-family: Lobster;
+    color: #333;
+}
+
+a.tag:hover {
+    color: #4186A7;
+    border-color: #4186A7;
+    text-decoration: none;
+}
+
+.tag_active {
+    background-color: #4186A7;
+    color: white;
+    border: white;
+}
+
+.light {
+    background-color: #FAFAF0;
+    padding: 2em;
+    text-align: center;
+}
+
+.dark {
+    background-color: #4186A7;
+    color: #FFF;
+    padding: 2em;
+}
+
+.bright {
+    background-color: #FFDC14;
+    padding: 2em;
+}
+
+.white {
+    background-color: #FFF;
+}
+
+.stripes {
+    background-image: url('../images/stripes.png');
+    background-repeat: repeat;
+    height: 90px;
+    background-color: #FFF;
+    border-bottom: 20px solid #FFF;
+    border-top: 4px solid #FFF;
+}
+
+.top-border {
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-top-color: #000;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #000;
+    padding: 5px 0 0;
+    background-color: #FFF;
+}
+
+.bottom-border {
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: #000;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #000;
+    padding: 5px 0 0;
+    background-color: #FFF;
+    position: relative;
+    margin: 40px 0;
+}
+
+.hat {
+    background: center center url('../images/hat.png') no-repeat #FFF;
+    width: 84px;
+    height: 62px;
+    padding: 0 10px;
+    background-size: contain;
+    position: absolute;
+    left: 50%;
+    margin-left: -32px;
+    top: 50%;
+    margin-top: -31px;
+}
+
+.recipe {
+    text-decoration: none;
+    color: black;
+    width: 25%;
+}
+
+.recipe:hover {
+    text-decoration: none;
+}
+
+.ingredients .label {
+    margin-right: 0.5em;
+    color: #fff;
+}
+
+.recipe-preview .media-object {
+    height: 100px;
+    border: 1px solid #ddd;
+    padding: 4px;
+    background: #fff;
+    width: 130px;
+}
+
+.recipe-preview .difficulty {
+    color: #777;
+}
+
+.media-object {
+    margin-bottom: 50px;
+}
+
+.media-body a {
+    text-decoration: none;
+    color: black;
+}
+
+.media-heading {
+    font-family: Times New Roman, serif;
+    font-size: 1.5em;
+}

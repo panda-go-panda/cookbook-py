@@ -1,0 +1,54 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+
+        <title>{{ title }} | Cookbook </title>
+
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+      
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+        <link type="text/css" rel="stylesheet" href="{% static 'css/main.css' %}" />
+    </head>
+    <body>
+        <section class="white">
+            <section class="stripes"></section>
+
+            <section class="top-border">
+            </section>
+
+            <h1 class="mainhead">
+                <a href="{% url 'home' %}">
+                    {{ title }}
+                </a>
+            </h1>
+
+            <section class="bottom-border">
+                <div class="hat"></div>
+            </section>
+
+            <section class="light">
+                {% for tag in tags %}
+                    {% url 'recipes' tag.name as href %}
+                    {% if href == request.path|urlencode %}
+                        <span class="tag tag_active">{{ tag.name }}</span>
+                    {% else %}
+                        <a class="tag" href="{{ href }}">{{ tag.name }}</a>
+                    {% endif %}
+                {% endfor %}
+            </section>
+
+            <section class="bright">
+                {% block content %}{% endblock %}
+            </section>
+        </section>
+
+        <footer>2015 Powered by Django</footer>
+    </body>
+</html>

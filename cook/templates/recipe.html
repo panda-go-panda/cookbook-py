@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}        
+    <div class="media recipe-preview">
+        <div class="media-left">
+            <img class="media-object" src="{{ recipe.picture }}" alt="" />
+        </div>
+
+        <div class="media-body">
+            <h4 class="media-heading">{{ recipe.title }}</h4>
+            {% include 'difficulty.html' with value=recipe.difficulty %}
+            {{ recipe.instructions | linebreaks }}
+
+            <div class="ingredients">
+                {% for ingredient in recipe.ingredients.all %}
+                    <a href="{% url 'ingredients' ingredient %}" class="label label-info">
+                        {{ ingredient }}
+                    </a>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

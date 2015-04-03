@@ -1,0 +1,13 @@
+<div class="media recipe-preview">
+    <div class="media-left">
+        <a href="{% url 'recipe' recipe.pk %}">
+            <img class="media-object" src="{{ recipe.picture }}" alt="" />
+        </a>
+    </div>
+    <div class="media-body">
+        <h4 class="media-heading">
+            <a href="{% url 'recipe' recipe.pk %}">{{ recipe.title }}</a>
+        </h4>
+        {% include 'difficulty.html' with value=recipe.difficulty %}
+    </div>
+</div>
